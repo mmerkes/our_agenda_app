@@ -9,7 +9,7 @@ var app = require('../app').app;
 
 describe('Users JSON api', function(){
   var id;
-
+/*
   it('get a collection', function(done) {
     superagent.get("http://localhost:3000/api/v1/users").end( function( error, response ) {
       expect(error).to.be.eql(null);
@@ -17,7 +17,7 @@ describe('Users JSON api', function(){
       done();
     });
   });
-
+*/
   it('should be able to create a user', function(done) {
     superagent.post('http://localhost:3000/api/v1/users')
       .send({
@@ -34,7 +34,7 @@ describe('Users JSON api', function(){
         done();
     });
   });
-
+/*
   it('should be able to get a user by id', function(done) {
     superagent.get('http://localhost:3000/api/v1/users/' + id)
       .end( function(error, response) {
@@ -69,6 +69,7 @@ describe('Users JSON api', function(){
         done();
       });
   });
+*/
 });
 
 
