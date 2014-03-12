@@ -14,3 +14,10 @@ var User = Backbone.Model.extend({
 
 var user = new User({first_name: "Steve", last_name: "McQueen"});
 user.save();
+
+$('body').append('<button>Change Name</button>');
+
+$('button').click( function() {
+  user.set('first_name', 'Greg');
+  user.save();
+});

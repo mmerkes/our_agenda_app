@@ -43,12 +43,19 @@ exports.findById = function(request, response) {
 };
 
 exports.updateUser = function(request, response) {
-  User.update({_id: request.params.id}, request.body, function(error) {
-    if(error) {
-      errorResponse();
-    } else {
-      response.send({'message': "Success"});
-    }
+  console.log('PUT request');
+  return User.findById( request.params.id, function(err, user) {
+    user.first_name = request.body.first_name;
+    user.last_name = request.body.last_name;
+    user.email = request.body.email;
+
+    return user.save(function(err) {
+      if(err)
+        console.log(err);
+      else
+        console.log('user updated');
+      return response.send(user);
+    });
   });
 };
 
