@@ -1,0 +1,17 @@
+{
+  "name": "our_agenda_app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mmerkes/our_agenda_app",
+  "authors": [
+    "Empty Arsenal <matt.merkes@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

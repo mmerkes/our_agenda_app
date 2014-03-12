@@ -9,9 +9,9 @@ exports.collection = function(request, response) {
     if(error) {
       response.writeHead(500);
       response.send({'error': error});
+    } else {
+      response.send(users);
     }
-
-    response.send(users);
   });
 };
 
